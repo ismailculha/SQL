@@ -1,0 +1,15 @@
+
+
+USE SampleRetail;
+
+-- create schemas
+IF(NOT EXISTS (SELECT * FROM sys.schemas WHERE name = 'product'))
+BEGIN
+	EXEC ('CREATE SCHEMA [product] AUTHORIZATION [dbo]')
+END
+
+--CREATE SCHEMA product;
+go
+
+CREATE SCHEMA sale;
+go
